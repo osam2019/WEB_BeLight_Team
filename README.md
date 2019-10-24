@@ -70,9 +70,47 @@ script(async  defer  src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_K
 
 ![enter image description here](https://i.imgur.com/Y2SYZAu.png)
 
+![enter image description here](https://i.imgur.com/xwxlSTE.png)
+
+![enter image description here](https://i.imgur.com/5IJkxlc.pngd-2f50b6dccd83)
+
 ![enter image description here](https://i.imgur.com/LXQyuar.png)
 
 ![enter image description here](https://i.imgur.com/4DQOLtA.png)
+
+## 사용법 (Getting Started)
+
+서버 구동후, 회원가입과 로그인을 진행합니다.
+
+그후, 메인페이지의 Search Form의 Input Text box에
+주소를 입력하면, Google의 주소 자동완성 기능이 나타나면서, 
+원하느 장소와, 옵션을 선택후 검색을 누르게 되면,
+
+해당 지역의 호스트(제휴업체)들이 구글 맵에, Marker(핀)으로
+나타나게 되며, 핀을 클릭하게 되면, 맡길곳과 찾을곳을
+선택할 수 있는데, 
+
+용산역 근처의 호스트에게 짐을 맡기고, 
+계룡역 근처의 호스트에게서 짐을 찾게끔 설정할 수도 있습니다.
+
+맡길 호스트와 찾을 호스트를 모두 선택했다면, 
+다음으로 넘어가, 예약을 마칩니다.
+
+예약 신청을 하게되면, Host 유저에게 Push 알람이 가게 되고,
+승인이 된후, 서비스를 이용할 수 있게 됩니다.
+
+승인이 된후, 맡길곳에서, 호스트가 가지고 있는 QrCode를 
+호스트앱에서 스캔하면, 맡김 처리가 되며,
+
+찾을곳에서, 유저가 QrCode를 스캔하면 거래 완료 처리가 됩니다.
+
+## 업데이트 예정 사항
+
+TODO: **1.0.1ver.**  Validation Checking
+TODO: **1.0.1ver.** XSS, SQL Injection 등, 보안이슈 해결
+
+
+
 
 ## APP
 
