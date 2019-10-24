@@ -107,6 +107,7 @@ script(async  defer  src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_K
 ## 업데이트 예정 사항
 
 TODO: **1.0.1ver.**  Validation Checking
+
 TODO: **1.0.1ver.** XSS, SQL Injection 등, 보안이슈 해결
 
 
