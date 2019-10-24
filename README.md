@@ -16,7 +16,7 @@
 
 git clone 명령어로, BeLight 저장소를 클론한다.
 
-    git clone https://github.com/be-light/be-light.git
+    git clone https://github.com/osam2019/WEB_BeLight_Team.git
 
 ## 패키지 설치
 
@@ -119,7 +119,7 @@ TODO: **1.0.1ver.** XSS, SQL Injection 등, 보안이슈 해결
 
 git clone 명령어로, BeLight 저장소를 클론한다.
 
-    git clone https://github.com/be-light/be-light.git
+    git clone https://github.com/osam2019/App_Be-Light_Team.git
     
 ## Installation
 
