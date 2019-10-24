@@ -1,0 +1,232 @@
+doctype html
+html(lang="en")
+    head
+        title #{title}
+        include favicons.pug
+        link(rel="stylesheet" href="app.css")
+
+    body(style="background-color:skyblue;")
+        h1 User
+        p Login Form
+        form(action="/api/auth/login" method="POST")
+            input(type="text" name="userId")
+            input(type="password" name="userPassword")
+            input(type="submit")
+        
+
+        p Register Form
+        form(action="/api/auth/register" method="POST")
+            input(type="text" name="userId")
+            input(type="text" name="userPassword")
+            input(type="text" name="userName")
+            input(type="text" name="userEmail")
+            input(type="text" name="userPhoneNumber")
+            input(type="text" name="userAddress")
+            input(type="submit")
+
+        p BringMyProfile Form
+        form(action="/api/user" method="GET")
+            input(type="submit")
+
+        p UpdateMyProfile Form
+        form(action="/api/user?_method=PUT" method="POST" enctype="multipart/form-data")
+            input(type="text" name="userEmail")
+            input(type="text" name="userPhoneNumber")
+            input(type="text" name="userAddress")
+            input(type="password" name="userPassword")
+            input(type="file" name="profile" accept="image/*")
+            input(type="submit")
+        
+        p withDraw Form.
+        form(action="/api/user?_method=DELETE" method="POST")
+            input(type="text" name="userPassword")
+            input(type="submit")
+
+        h1 HostUser
+        p HostUser Register Form
+        form(action="/api/hoster/register", method="POST")
+            input(type="text" name="hostUserId")
+            input(type="text" name="hostUserPassword")
+            input(type="text" name="hostUserName")
+            input(type="text" name="hostUserEmail")
+            input(type="text" name="hostUserPhoneNumber")
+            input(type="submit")
+
+        p HostUser Login
+        form(action="/api/auth/hoster/login", method="POST")
+            input(type="text" name="hostUserId")
+            input(type="text" name="hostUserPassword")
+            input(type="submit")
+
+        p HostUser Get Profile
+        form(action="/api/hoster", method="GET")
+            input(type="submit")
+
+        p HostUser Update Profile
+        form(action="/api/hoster?_method=PUT", method="POST" enctype="multipart/form-data")
+            input(type="text" name="hostUserName")
+            input(type="text" name="hostUserEmail")
+            input(type="text" name="hostUserPhoneNumber")
+            input(type="password" name="hostUserPassword")
+            input(type="file" name="profile" accept="image/*")
+            input(type="submit")
+
+
+        p HostUser Destory Form
+        form(action="/api/hoster?_method=DELETE" method="POST")
+            input(type="text" name="hostUserPassword")
+            input(type="submit")
+
+        p HostUser Get Accept User Order
+        form(action="/api/hoster/order/all" method="GET")
+            input(type="submit")
+
+
+        p HostUser Get Pending User Order
+        form(action="/api/hoster/order/pending" method="GET")
+            input(type="submit")
+
+        p HostUser Accept User Order
+        form(action="/api/hoster/order?_method=PUT" method="POST")
+            input(type="text" name="reciptNumber")
+            input(type="text" name="accept")
+            input(type="text" name="userId")
+            input(type="submit")
+        
+        p HostUser Update UserOrderStatus
+        form(action="/api/hoster/order/status" method="POST")
+            input(type="text" name="randomString")
+            input(type="text" name="userId")
+            input(type="text" name="reciptNumber")
+            input(type="submit")
+
+        p User Update UserOrderStatus
+            form(action="/api/user/order/status" method="POST")
+                input(type="text" name="randomString")
+                input(type="text" name="userId")
+                input(type="text" name="reciptNumber")
+                input(type="submit")
+        h1 Host
+
+        p Host addNewHost
+        form(action="/api/host" method="POST" enctype="multipart/form-data")
+            input(type="text" name="hostName")
+            input(type="text" name="hostTel")
+            input(type="text" name="hostAddress")
+            input(type="text" name="hostPostalCode")
+            input(type="text" name="hostLatitude")
+            input(type="text" name="hostLongitude")
+            input(type="text" name="hostIntro")
+            input(type="time" name="hostOpenTime")
+            input(type="time" name="hostCloseTime")
+            input(type="file" name="hostImage")
+            input(type="submit")
+
+        p Host getAllHost
+        form(action="/api/host" method="GET")
+            input(type="submit")
+
+        p Host updateHost
+        form(action="/api/host?_method=PUT" method="POST" enctype="multipart/form-data")
+            input(type="text" name="idx")
+            input(type="text" name="hostName")
+            input(type="text" name="hostTel")
+            input(type="text" name="hostAddress")
+            input(type="text" name="hostPostalCode")
+            input(type="text" name="hostLatitude")
+            input(type="text" name="hostLongitude")
+            input(type="text" name="hostIntro")
+            input(type="time" name="hostOpenTime")
+            input(type="time" name="hostCloseTime")
+            input(type="file" name="hostImage")
+            input(type="submit")
+
+        p Host Destroy
+        form(action="/api/host?_method=DELETE" method="POST")
+            input(type="text" name="hostIdx")
+            input(type="submit")
+
+        h1 UserOrder
+
+        p UserOrder getOrderList
+        form(action="/api/user/order" method="GET")
+            input(type="submit")
+
+        p UserOrder requestNewOrder
+        form(action="/api/user/order" method="POST")
+            input(type="text", name="hostIdx")
+            input(type="date", name="checkIn")
+            input(type="text" name="checkOut")
+            input(type="text" name="paid")
+            input(type="text" name="gHostIdx")
+            input(type="text" name="itemCount")
+            input(type="submit")
+
+        p UserOrder Update
+        form(action="/api/user/order?_method=PUT" method="POST")
+            input(type="text" name="reciptNumber")
+            input(type="date" name="checkIn")
+            input(type="date" name="checkOut")
+            input(type="text" name="itemCount")
+            input(type="submit")
+
+        p UserOrder Cancel
+        form(action="/api/user/order?_method=DELETE" method="POST")
+            input(type="text" name="reciptNumber")
+            input(type="submit")
+
+        p Google Maps Test
+        form(method="POST" class="search__form")
+            input(type="text" placeholder="Search.." name="search__text", class="search__text" id="searchTextField")
+
+        div#map
+
+        h1 UserReview
+
+        p UserReview getAllReviews
+        form(action="/api/reviews" method="GET")
+            input(type="text" name="hostIdx")
+            input(type="submit")
+
+        p UserReview getLastReviews
+        form(action="/api/reviews/5" method="GET")
+            input(type="submit")
+
+        p UserReview getUserReview
+        form(action="/api/review" method="GET")
+            input(type="text" name="userId")
+            input(type="submit")
+
+        p UserReview CreateNewReview
+        form(action="/api/review" method="POST")
+            input(type="text" name="review")
+            input(type="text" name="reviewScore")
+            input(type="text" name="hostIdx")
+            input(type="submit")
+
+        p UserReview UpdateReview
+        form(action="/api/review?_method=PUT" method="POST")
+            input(type="text" name="reviewNumber")
+            input(type="text" name="review")
+            input(type="text" name="reviewScore")
+            input(type="text" name="hostIdx")
+            input(type="submit")
+        
+        p UserReview DeleteReview
+        form(action="/api/review?_method=DELETE" method="POST")
+            input(type="text" name="reviewNumber")
+            input(type="text" name="hostIdx")
+            input(type="submit")
+
+        button#modalBtn Button
+
+        h1 Push Testing
+        form(action="/tests" method="POST")
+            input(type="submit")
+
+        include login.pug
+    script(src="lightMap.js")
+    script(src="bundle.js")
+    script(async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=places")
+
+        

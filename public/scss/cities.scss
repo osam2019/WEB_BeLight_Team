@@ -1,0 +1,60 @@
+#cities {
+  margin-top: 80px;
+  background-image: url("../../public_dist/images/cities_background.png");
+  background-position: top;
+  height: 800px;
+
+  .cities__header {
+    padding-top: 30px;
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+
+    .cities__header--title {
+      font-size: 35px;
+      margin-bottom: 15px;
+      color: black !important;
+    }
+    .cities__header--text {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 50px;
+    }
+    .text {
+      color: #565556;
+    }
+  }
+
+  .cities__contents {
+    display: flex;
+    justify-content: center;
+    .block {
+      width: 20%;
+      height: 600px;
+      background-size: cover;
+      border-radius: 20px;
+      padding-left: 10px;
+      padding-top: 10px;
+      margin-top: 20px;
+
+      &:nth-child(2) {
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+    }
+    .cities__contents--seoul {
+      background-image: url("../../public_dist/images/seoul.jpg");
+    }
+    .cities__contents--jeonju {
+      background-image: url("../../public_dist/images/jeonju.jpg");
+    }
+    .cities__contents--busan {
+      background-image: url("../../public_dist/images/busan.jpg");
+    }
+  }
+}
+
+.cname {
+  color: #58aeda;
+  font-size: 25px;
+  font-weight: 700;
+}

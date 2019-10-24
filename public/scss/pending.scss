@@ -1,0 +1,114 @@
+.pending__body {
+  height: unset !important;
+}
+#pending {
+  margin-top: 150px;
+  margin-left: 50px;
+  margin-right: 50px;
+  color: #b2b2b2;
+
+  .pending__header {
+    margin-bottom: 30px;
+    font-size: 25px;
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+  }
+
+  .pending__contents {
+    margin-bottom: 170px;
+    .pending__contents__column {
+      .pending__contents--title {
+        color: #1797d6;
+        font-size: 40px;
+        margin-bottom: 30px;
+        font-family: "Jua", sans-serif;
+        font-weight: 400;
+      }
+
+      .pending__contents__sub {
+        display: flex;
+        margin: 30px 0px;
+        align-items: center;
+
+        .pending__contents__sub--text {
+          margin-bottom: 0px;
+          font-size: 20px;
+          margin-right: 17px;
+          font-family: "Jua", sans-serif;
+          font-weight: 400;
+        }
+        .pending__contents__sub--bagCount {
+          border: 1px solid #707070;
+          border-radius: 20px;
+          height: 20px;
+          text-align: center;
+          margin-right: 14px;
+          width: 50px;
+        }
+        .pending__contents__sub--block {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          p {
+            font-family: "Jua", sans-serif;
+            font-weight: 400;
+            font-size: 17px;
+          }
+
+          .subCalendar {
+            border: 1px solid #565656;
+            padding: 10px;
+            font-size: 23px;
+            border-radius: 50px;
+            text-align: center;
+          }
+
+          .startDate {
+            margin-right: 10px;
+          }
+        }
+
+        .bagImg {
+          margin-right: 17px;
+        }
+        .minusImg {
+          margin-right: 8px;
+        }
+
+        .pendingImg {
+          cursor: pointer;
+        }
+      }
+
+      .completeBtn {
+        border: none;
+        background-color: #0096d9;
+        color: white;
+        border-radius: 25px;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: 900;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.pendingImg {
+  width: 25px;
+  height: 25px;
+}
+
+.pspace {
+  margin-bottom: 15px;
+  color: #707070;
+  font-weight: 600;
+}
+
+.nbsp {
+  margin: 0px 15px;
+}
+
+.strong {
+  color: black;
+}

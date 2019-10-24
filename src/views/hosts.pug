@@ -1,0 +1,13 @@
+section#hosts
+    div.hosts__columns
+    div#map
+div.hosts__footer--block
+    form(method="GET" action="/pending" class="hosts__next--Form")
+        input(type="hidden" class="bagCount" name="bagCount")
+        input(type="hidden" class="hostLatitude" name="hostLatitude")
+        input(type="hidden" class="hostLongitude" name="hostLongitude")
+        input(type="hidden" class="gHostLatitude" name="gHostLatitude")
+        input(type="hidden" class="gHostLongitude" name="gHostLongitude")
+        input(type="hidden" class="hostIdx" name="hostIdx")
+        input(type="hidden" class="gHostIdx" name="gHostIdx")
+        input(type="button" class="hosts__nextBtn" value="다음")

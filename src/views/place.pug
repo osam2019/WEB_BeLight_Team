@@ -1,0 +1,18 @@
+doctype html
+html(lang="ko")
+    head
+        title #{title}
+        include favicons.pug
+        link(href="app.css" rel="stylesheet")
+        script(src="bundle_maps.js")
+        script(async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=places")
+    body
+        include header_place.pug
+        main#place_contents
+            include hosts.pug
+        include login.pug
+        include footer.pug
+
+        script(src="bundle_placecomplete.js")
+        script(src="bundle.js")
+        script(src="listeners.js")

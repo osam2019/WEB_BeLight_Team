@@ -1,0 +1,42 @@
+section#intro
+    div.intro__header
+        h2.intro__header--title 비라이트와 함께 가벼운 여행을 떠나세요!
+    div.intro__contents
+        p.intro__contents--paragraph 비라이트의 파트너 상점에 짐을 맡기고 원하는 장소에서 짐을 찾아가세요
+        p.intro__contents--paragraph 가벼운 몸과 마음으로 여행, 출장, 데이트를 즐기세요
+
+        div.intro__contents__store
+            img(src="images/appstore.png" alt="appstore" class="intro__contents__store--appstoreimg storeimg")
+            img(src="images/googlestore.png" alt="googlestore" class="intro__contents__store--googlestoreimg storeimg")
+
+    form(action="/place" method="GET" class="intro__searchform")
+        img(src="images/menu.png", alt="menu" class="intro__searchform--menu icon--menu")
+
+        div.intro__searchform--block
+            img(src="images/markerpin01.png" alt="markerpin01" class="intro__searchform--pin icon--sm")
+            input(type="text" placeholder="짐을 맡길 장소" class="input__place" name="dropPlace")
+
+        div.intro__searchform--block.space
+            img(src="images/calendar.png" alt="calendar" class="intro__searchform--calendar icon--sm")
+            input(type="date" placeholder="짐을 맡기는 날짜" name="startDate" class="startDate")
+
+        div.intro__searchform--block.space
+            img(src="images/calendar.png" alt="calendar" class="intro__searchform--calendar icon--sm")
+            input(type="date" placeholder="짐을 찾아가는 날짜" name="endDate" class="endDate")
+
+        div.intro__searchform--block.space
+            img(src="images/bag.png" alt="bag" class="intro__searchform--bag icon--sm")
+            span.intro__searchform--baglabel 개수 &nbsp;
+            span.intro__searchform--bagcount 1
+            input(type="hidden" name="bagCount" value="1")
+            img(src="images/minus.png" alt="minus" class="intro__searchform--minusbtn icon--sm minusButton")
+            img(src="images/plus.png" alt="plus" class="intro__searchform--plusbtn icon--sm plusButton")
+
+        input(type="hidden" class="user__latitude" name="latitude" id="lat")
+        input(type="hidden" class="user__longitude" name="longitude" id="lng")
+        input(type="submit" value="Search" class="intro__searchform--submitbtn global__searchBtn")
+
+    div.intro__footer
+        img(src="images/intro_footer1.png" alt="intro_footer1" class="intro__footer--img")
+        img(src="images/intro_footer2.png" alt="intro_footer2" class="intro__footer--img")
+        img(src="images/intro_footer3.png" alt="intro_footer3" class="intro__footer--img")

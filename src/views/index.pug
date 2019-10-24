@@ -1,0 +1,21 @@
+doctype html
+html(lang="ko")
+    head
+        title #{title}
+        include favicons.pug
+        link(href="app.css" rel="stylesheet")
+        script(async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places")
+    body
+        include header.pug
+        main#contents
+            include intro.pug
+            include use.pug
+            include boast.pug
+            include cities.pug
+            include customer.pug
+            include price.pug
+        include login.pug
+        include footer.pug
+        
+        script(src="bundle_autocomplete.js")
+        script(src="bundle.js")

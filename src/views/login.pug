@@ -1,0 +1,36 @@
+div#loginModal
+    div.modal__columns
+        div.modal__column
+            div.modal__nav
+                div.modal__nav__header
+                    p.modal__nav__header--title Login
+                    p.modal__nav__header--text 가볍고 즐거운 여행을 위해 <br> 짐을 맡기세요
+                div.modal__nav__footer
+                    img(src="images/logo.png" alt="logo" class="modal__footer--logo")
+
+        div.modal__column.form
+            div.modal__contents
+                div.modal__contents--block
+                    img(src="images/cancel.png" alt="cancel" class="modal__contents--cancelBtn closeBtn")
+                
+                form(class="loginForm" method="POST" action="/api/auth/login")
+                    input(type="text" name="userId" class="modal__contents__input" placeholder="User ID")
+                    input(type="password" name="userPassword" class="modal__contents__input" placeholder="Password")
+                    input(type="button" class="loginButton" value="Login")
+
+                form(class="registerForm" method="POST" action="/api/auth/register")
+                    input(type="text" name="userId" class="modal__contents__input" placeholder="User ID")
+                    input(type="password" name="userPassword" class="modal__contents__input" placeholder="Password")
+                    input(type="text" name="userName" class="modal__contents__input" placeholder="User Name")
+                    input(type="text" name="userEmail" class="modal__contents__input" placeholder="User Email")
+                    input(type="text" name="userPhoneNumber" class="modal__contents__input" placeholder="User PhoneNumber")
+                    input(type="text" name="userAddress" class="modal__contents__input" placeholder="User Address")
+                    input(type="button" class="registerButton" value="Register")
+
+            div.modal__footer.login__footer
+                p.forget--link.strongText Forgot Password
+                span.register--text No Account? <span class="register--link strongText">Register now</span>
+            
+            div.modal__footer.register__footer
+                    span.register--text Already have a BeLight account? <span class="login--link strongText">Login</span
+                    

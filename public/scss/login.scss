@@ -1,0 +1,143 @@
+#loginModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  height: 480px;
+  width: 800px;
+  background-color: white;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+
+  .modal__columns {
+    display: flex;
+    height: 100%;
+
+    .modal__column {
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+
+      .modal__nav {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(25, 150, 214);
+        height: 100%;
+        padding: 30px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+
+        p {
+          color: white;
+        }
+
+        .modal__nav__header {
+          text-align: center;
+        }
+
+        .modal__nav__header--title {
+          font-size: 40px;
+          font-weight: 900;
+          margin-bottom: 20px;
+        }
+
+        .modal__nav__header--text {
+          font-size: 15px;
+          font-weight: 600;
+        }
+
+        .modal__nav__footer {
+          position: absolute;
+          bottom: 20px;
+          img {
+            width: 100px;
+          }
+        }
+      }
+
+      .modal__contents {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .modal__contents--block {
+          position: absolute;
+          top: 3px;
+          right: 3px;
+
+          img {
+            cursor: pointer;
+            margin-top: 3px;
+            margin-right: 3px;
+            margin-bottom: 20px;
+            width: 20px;
+            height: 20px;
+          }
+        }
+
+        .loginForm,
+        .registerForm {
+          .modal__contents__input,
+          .loginButton,
+          .registerButton {
+            width: 90%;
+            height: 30px;
+            border-radius: 20px;
+            border: 1px solid #aaaaaa;
+            text-align: center;
+            margin-bottom: 8px;
+          }
+
+          .loginButton,
+          .registerButton {
+            border: none;
+            background-color: #1996d6;
+            color: white;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .form {
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+
+      .modal__footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 20px;
+
+        .forget--link {
+          margin: 20px;
+        }
+
+        p,
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.strongText {
+  color: #36a3db;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+}

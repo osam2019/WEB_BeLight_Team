@@ -1,0 +1,16 @@
+doctype html
+html(lang="ko")
+    head
+        title #{title}
+        include favicons.pug
+        link(href="app.css" rel="stylesheet")
+
+    body(class="pending__body")
+        include header.pug
+        main#pending
+            include reserve_pending_contents.pug
+        include login.pug
+        include footer.pug
+
+        script(src="bundle.js")
+        script(src="pending.js")

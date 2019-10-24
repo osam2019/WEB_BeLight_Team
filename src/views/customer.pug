@@ -1,0 +1,63 @@
+section#customer
+    div.customer__header
+        h1.customer__header--title.text 고객
+        h3.customer__header--text.text 국내 최고의 네트워크 시스템으로 자동운반 비라이트
+
+    div.customer__reviews
+        //-img(src="images/left_arrow.png" alt="left_arrow" class="left_btn arrowbtn")
+        div.customer__reviews__review.hide
+        div.customer__reviews__review
+            div.customer__reviews__review__content
+                div.customer__reviews__review__content--head
+                    img(src="images/guest.png" alt="guest" class="userimg")
+                    span.customer__reviews__reivew--username #{reviews[0].dataValues.userId}
+                    div.customer__reviews__review__content--images
+                        img(src="images/star_full.png" alt="star_full.png" class="userimg")
+                        img(src="images/star_full.png" alt="star_full.png" class="userimg")
+                        img(src="images/star_full.png" alt="star_full.png" class="userimg")
+                        img(src="images/star_full.png" alt="star_full.png" class="userimg")
+                        img(src="images/star_full.png" alt="star_full.png" class="userimg")
+            
+                div.customer__reviews__review__content--body
+                    p.customer__reviews__review__content--text #{reviews[0].dataValues.review}
+
+        div.customer__reviews__review.selected
+            div.customer__reviews__review__content
+                div.customer__reviews__review__content--head
+                    img(src="images/guest.png" alt="guest" class="userimg")
+                    span.customer__reviews__reivew--username #{reviews[1].dataValues.userId}
+                    div.customer__reviews__review__content--images
+                        img(src="images/star_full.png" alt="star_full.png" class="userimg")
+                        img(src="images/star_full.png" alt="star_full.png" class="userimg")
+                        img(src="images/star_full.png" alt="star_full.png" class="userimg")
+                        img(src="images/star_full.png" alt="star_full.png" class="userimg")
+                        img(src="images/star_full.png" alt="star_full.png" class="userimg")
+                
+                div.customer__reviews__review__content--body
+                    p.customer__reviews__review__content--text #{reviews[1].dataValues.review}
+                    
+        div.customer__reviews__review
+            div.customer__reviews__review__content
+                div.customer__reviews__review__content--head
+                    img(src="images/guest.png" alt="guest" class="userimg")
+                    span.customer__reviews__reivew--username #{reviews[2].dataValues.userId}
+                    div.customer__reviews__review__content--images
+                        img(src="images/star_full.png" alt="star_full.png" class="userimg")
+                        img(src="images/star_full.png" alt="star_full.png" class="userimg")
+                        img(src="images/star_full.png" alt="star_full.png" class="userimg")
+                        img(src="images/star_full.png" alt="star_full.png" class="userimg")
+                        img(src="images/star_full.png" alt="star_full.png" class="userimg")
+            
+                div.customer__reviews__review__content--body
+                    p.customer__reviews__review__content--text #{reviews[2].dataValues.review}
+
+        div.customer__reviews__review.hide
+        //-img(src="images/right_arrow.png" alt="right_arrow" class="right_btn arrowbtn")
+
+    //-div.customer__slide
+        //-div.customer__slide--button
+        //-div.customer__slide--button
+        //-div.customer__slide--button.clicked
+        //-div.customer__slide--button
+        //-div.customer__slide--button
+        

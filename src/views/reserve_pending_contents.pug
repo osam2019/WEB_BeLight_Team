@@ -1,0 +1,37 @@
+div.pending__header
+    p.pending__header--text <span class="strong">1. 예약하기</span> <span class="nbsp">></span> 2. 예약완료
+
+div.pending__contents
+    div.pending__contents__column
+        h1.pending__contents--title.pspace 예약하기
+        p.pending__contents--text.pspace 추가할 사항이 있나요?
+        p.pending__contents--intro.pspace #{bagCount} 개의 물건을 보관 예정이며, 예약 시 지정한 수화물 외 추가 수하물은 현장에서 허용되지 않습니다.
+        p.pending__contents--text.pspace 필요한 경우 추가 수하물을 추가하십시오.
+
+        div.pending__contents__sub
+            img(src="/images/bag.png" alt="bag" class="bagImg pendingImg")
+            p.pending__contents__sub--text.pspace 수화물 개수
+            input(type="text" class="pending__contents__sub--bagCount" readonly="true" value="0")
+            img(src="/images/minus.png" alt="minus" class="minusImg pendingImg")
+            img(src="/images/plus.png" alt="plus" class="plusImg pendingImg")
+
+        h2.pending__contents--calText.pspace 수화물을 맡겨주실 날짜와, 수화물을 받으실 날짜를 기입 해주십시오.
+        
+        div.pending__contents__sub
+            div.pending__contents__sub--block
+                p.pending__dateText.pspace 맡겨주실 날짜
+                input(type="date" class="startDate subCalendar f_start")
+
+            div.pending__contents__sub--block
+                p.pending__dateText.pspace 찾아주실 날짜
+                input(type="date" class="endDate subCalendar f_end")
+        
+        form(method="POST" action="/api/user/order" class="orderForm")
+            input(type="date" hidden="true" name="checkIn" class="hid__checkIn")
+            input(type="date" hidden="true" name="checkOut" class="hid__checkOut")
+            input(type="text" hidden="true" name="paid" class="hid__paid")
+            input(type="text" hidden="true" name="hostIdx" class="hid__hostIdx")
+            input(type="text" hidden="true" name="gHostIdx" class="hid__gHostIdx")
+            input(type="text" hidden="true" name="itemCount" class="hid__itemCount")
+        
+        input(type="button" class="completeBtn" value="예약신청")

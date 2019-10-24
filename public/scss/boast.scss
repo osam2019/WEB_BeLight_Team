@@ -1,0 +1,23 @@
+#boast {
+  background-image: url("../../public_dist/svg/cloud.svg");
+  background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding-top: 100px;
+
+  .boast__columns {
+    display: flex;
+    justify-content: space-around;
+
+    .boast__column {
+      .boast__column--paragraph {
+        text-align: center;
+        font-size: 30px;
+        margin-top: 20px;
+        color: black;
+        font-family: "Jua", sans-serif;
+        font-weight: 400;
+      }
+    }
+  }
+}
